@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(white, rgb(0, 106, 255));
+    height: 100vh;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.todo-app {
+    background-color: white;
+    padding: 30px;
+    width: 35%;
+    height: 40%;
+    border-radius: 5px;
+}
+
+.todo-app h3 {
+    margin: 10px 0px 25px;
+    color: gray;
+}
+.list{
+    background-color: rgb(236, 234, 234);
+    border-radius: 50px;
+}
+.list input{
+    width: 73%;
+    border: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    outline: none;
+}
+.list button{
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(62, 139, 247);
+    color: white;
+    width: 20%;
+}
+.list-container {
+    padding: 40px 50px;
+}
+.list-container ul li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.list-container  ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border: 50%;
+    background-image: url(Icons/Unchecked.png);
+    background-size: cover;
+    background-position: initial;
+    top: 0px;
+    left: -25px;
+}
+.list-container  ul li.check::before{
+    background-image: url(Icons/Checked.png);
+}
+ul li.check{
+    text-decoration: line-through;
+    color: red;
+}
+ul li span{
+    content: '';
+    position: absolute;
+    right: 0px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: rgb(241, 239, 239);
+    padding: 0px 5px;
+    transition: 0.5s;
+    color: black;
+    font-weight: 100;
+}
+ul li span:hover{
+    background-color: rgb(7, 175, 253);
+}
